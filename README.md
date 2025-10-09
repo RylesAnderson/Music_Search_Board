@@ -1,8 +1,3 @@
-# React + Vite
+# Music Search Board
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This gives users a way to search for artists' albums. It will only pull up LP but not EP's or Singles. In the future, I will add this to the search board. I also want to expand this page to do more like getting stats from users of songs the user listens to. 
