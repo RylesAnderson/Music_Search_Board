@@ -8,13 +8,14 @@ function App() {
     <>
     <div className="navbar-fixed">
       <Navbar />
+    </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/MusicBoardSearch" element={<MusicBoardSearch />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </div>
+
     </>
   );
 }

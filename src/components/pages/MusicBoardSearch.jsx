@@ -70,6 +70,8 @@ export const MusicBoardSearch = () => {
     
   return (
     <>
+    <br />
+    <br />
       <h1>Music Search Board</h1>
       <Container>
         <InputGroup>
