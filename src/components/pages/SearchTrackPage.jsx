@@ -58,22 +58,27 @@ export const SearchTrackPage = () => {
 
         await fetch(
           "https://api.spotify.com/v1/artists/" +
-            artistID + "/tracks?market=US", artistParams
+            artistID + "/top-tracks?market=US", artistParams
         )
           .then((result) => result.json())
           .then((data) => {
-            setTrack(data.items);
+            setTrack(data.tracks);
           });
       }
 
   return (
     <>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <h1>Artists Top Tracks</h1>
       <Container>
         <InputGroup>
           <FormControl
-            placeholder="Search For Track"
+            placeholder="Search For Artist"
             type="input"
-            aria-label="Search for a Track"
+            aria-label="Search for an Artist"
             onKeyDown={(event) => {
               if (event.key === "Enter") {
                 search();
@@ -104,12 +109,12 @@ export const SearchTrackPage = () => {
             alignContent: "center",
           }}
         >
-          {tracks.map((track) => {
+          {tracks.map((tracks) => {
             return (
               <Card
-                key={track.id}
+                key={tracks.id}
                 style={{
-                  backgroundColor: "grey",
+                  backgroundColor: "#678391",
                   margin: "10px",
                   borderRadius: "5px",
                   marginBottom: "30px",
@@ -117,7 +122,7 @@ export const SearchTrackPage = () => {
               >
                 <Card.Img
                   width={200}
-                  src={track.images[0].url}
+                  src={tracks.album.images[0].url}
                   style={{
                     borderRadius: "4%",
                   }}
@@ -133,17 +138,17 @@ export const SearchTrackPage = () => {
                       color: "black",
                     }}
                   >
-                    {track.name}
+                    {tracks.name}
                   </Card.Title>
                   <Card.Text
                     style={{
                       color: "black",
                     }}
                   >
-                    Release Date: <br /> {track.release_date}
+                    Release Date: <br /> {tracks.album.release_date}
                   </Card.Text>
                   <Button
-                    href={track.external_urls.spotify}
+                    href={tracks.external_urls.spotify}
                     style={{
                       backgroundColor: "black",
                       color: "white",
