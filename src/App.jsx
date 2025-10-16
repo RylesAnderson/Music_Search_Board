@@ -1,7 +1,7 @@
 import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
-import { MusicBoardSearch, Contact, Home, Services } from "./components/pages";
+import { MusicBoardSearch, Contact, Home, SearchTrackPage } from "./components/pages";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/MusicBoardSearch" element={<MusicBoardSearch />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/SearchTrackPage" element={<SearchTrackPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
