@@ -15,7 +15,6 @@ function App() {
         <Route path="/SearchTrackPage" element={<SearchTrackPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
     </>
   );
 }
