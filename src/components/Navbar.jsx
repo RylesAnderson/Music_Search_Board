@@ -24,7 +24,7 @@ export const Navbar = () => {
           <NavLink to="/SearchTrackPage">Search Track</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/UserSearchPage">User Search</NavLink>
         </li>
       </ul>
     </nav>
