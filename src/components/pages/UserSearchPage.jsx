@@ -11,7 +11,7 @@ import {
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 
-export const Contact = () => {
+export const UserSearchPage = () => {
   const [access_token, setAccessToken] = useState("");
 
   useEffect(() => {
@@ -32,4 +32,6 @@ export const Contact = () => {
         setAccessToken(data.access_token);
       });
   }, []);
+  
+  
 };
